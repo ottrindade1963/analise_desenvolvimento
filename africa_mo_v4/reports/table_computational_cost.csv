@@ -1,0 +1,4 @@
+Model,fit_time_s,predict_time_s,peak_mem_mb_max,n_runs
+Bayes_Partial,0.002,0.0,173.7,12
+RandomForest,0.277,0.058,173.7,12
+SARIMAX,0.007,0.0,173.7,12

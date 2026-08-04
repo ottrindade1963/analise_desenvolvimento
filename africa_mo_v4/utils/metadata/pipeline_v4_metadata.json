@@ -1,0 +1,19 @@
+{
+  "step": "pipeline_v4",
+  "timestamp": "2026-07-21T15:32:09.790755",
+  "params": {
+    "n_models": 6,
+    "n_specs": 5,
+    "n_folds": 5,
+    "lookback": 3,
+    "optuna_trials": 50
+  },
+  "metrics": {
+    "total_time_s": 466.8,
+    "best_RMSE": 1.6940441817484206
+  },
+  "output_files": [
+    "/tmp/fixpipeline/africa_mo_v4/reports/walkforward_results.csv",
+    "/tmp/fixpipeline/africa_mo_v4/tuning/results/hyperparameter_table.csv"
+  ]
+}

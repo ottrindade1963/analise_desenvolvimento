@@ -1,0 +1,40 @@
+\begin{table}
+\caption{Hyperparameter search: method, space, and selected values}
+\label{tab:hyperparameters}
+\begin{tabular}{lllllrl}
+\toprule
+Specification & Model & Search\_Method & N\_Trials & Selection\_Criterion & Seed & Best\_Params \\
+\midrule
+A1\_WDI\_only & RandomForest & Optuna TPE & 50 & RMSE on inner validation slice & 42 & \{'n\_estimators': 200, 'max\_depth': 10, 'min\_samples\_split': 5, 'min\_samples\_leaf': 2, 'max\_features': 'sqrt'\} \\
+A1\_WDI\_only & XGBoost & Optuna TPE & — & RMSE on inner validation slice & 42 & \{'max\_depth': 5, 'learning\_rate': 0.05, 'subsample': 0.8, 'colsample\_bytree': 0.8, 'reg\_alpha': 0.5, 'reg\_lambda': 2.0\} \\
+A1\_WDI\_only & SARIMAX & AIC order selection & — & AIC on training fold & 42 & — \\
+A1\_WDI\_only & LSTM & fixed architecture + early stopping & — & validation MSE (early stopping) & 42 & — \\
+A1\_WDI\_only & Bayes\_Partial & MCMC (partial pooling) / BayesianRidge fallback & — & R-hat convergence / validation MSE & 42 & — \\
+A1\_WDI\_only & Bayes\_Complete & MCMC (complete pooling) / BayesianRidge fallback & — & R-hat convergence / validation MSE & 42 & — \\
+A2\_WDI\_PCA1 & RandomForest & Optuna TPE & 50 & RMSE on inner validation slice & 42 & \{'n\_estimators': 200, 'max\_depth': 10, 'min\_samples\_split': 5, 'min\_samples\_leaf': 2, 'max\_features': 'sqrt'\} \\
+A2\_WDI\_PCA1 & XGBoost & Optuna TPE & — & RMSE on inner validation slice & 42 & \{'max\_depth': 5, 'learning\_rate': 0.05, 'subsample': 0.8, 'colsample\_bytree': 0.8, 'reg\_alpha': 0.5, 'reg\_lambda': 2.0\} \\
+A2\_WDI\_PCA1 & SARIMAX & AIC order selection & — & AIC on training fold & 42 & — \\
+A2\_WDI\_PCA1 & LSTM & fixed architecture + early stopping & — & validation MSE (early stopping) & 42 & — \\
+A2\_WDI\_PCA1 & Bayes\_Partial & MCMC (partial pooling) / BayesianRidge fallback & — & R-hat convergence / validation MSE & 42 & — \\
+A2\_WDI\_PCA1 & Bayes\_Complete & MCMC (complete pooling) / BayesianRidge fallback & — & R-hat convergence / validation MSE & 42 & — \\
+A3\_WDI\_6WGI & RandomForest & Optuna TPE & 50 & RMSE on inner validation slice & 42 & \{'n\_estimators': 200, 'max\_depth': 10, 'min\_samples\_split': 5, 'min\_samples\_leaf': 2, 'max\_features': 'sqrt'\} \\
+A3\_WDI\_6WGI & XGBoost & Optuna TPE & — & RMSE on inner validation slice & 42 & \{'max\_depth': 5, 'learning\_rate': 0.05, 'subsample': 0.8, 'colsample\_bytree': 0.8, 'reg\_alpha': 0.5, 'reg\_lambda': 2.0\} \\
+A3\_WDI\_6WGI & SARIMAX & AIC order selection & — & AIC on training fold & 42 & — \\
+A3\_WDI\_6WGI & LSTM & fixed architecture + early stopping & — & validation MSE (early stopping) & 42 & — \\
+A3\_WDI\_6WGI & Bayes\_Partial & MCMC (partial pooling) / BayesianRidge fallback & — & R-hat convergence / validation MSE & 42 & — \\
+A3\_WDI\_6WGI & Bayes\_Complete & MCMC (complete pooling) / BayesianRidge fallback & — & R-hat convergence / validation MSE & 42 & — \\
+A4\_WDI\_PCA\_inter & RandomForest & Optuna TPE & 50 & RMSE on inner validation slice & 42 & \{'n\_estimators': 200, 'max\_depth': 10, 'min\_samples\_split': 5, 'min\_samples\_leaf': 2, 'max\_features': 'sqrt'\} \\
+A4\_WDI\_PCA\_inter & XGBoost & Optuna TPE & — & RMSE on inner validation slice & 42 & \{'max\_depth': 5, 'learning\_rate': 0.05, 'subsample': 0.8, 'colsample\_bytree': 0.8, 'reg\_alpha': 0.5, 'reg\_lambda': 2.0\} \\
+A4\_WDI\_PCA\_inter & SARIMAX & AIC order selection & — & AIC on training fold & 42 & — \\
+A4\_WDI\_PCA\_inter & LSTM & fixed architecture + early stopping & — & validation MSE (early stopping) & 42 & — \\
+A4\_WDI\_PCA\_inter & Bayes\_Partial & MCMC (partial pooling) / BayesianRidge fallback & — & R-hat convergence / validation MSE & 42 & — \\
+A4\_WDI\_PCA\_inter & Bayes\_Complete & MCMC (complete pooling) / BayesianRidge fallback & — & R-hat convergence / validation MSE & 42 & — \\
+A5\_WDI\_6WGI\_inter & RandomForest & Optuna TPE & 50 & RMSE on inner validation slice & 42 & \{'n\_estimators': 200, 'max\_depth': 10, 'min\_samples\_split': 5, 'min\_samples\_leaf': 2, 'max\_features': 'sqrt'\} \\
+A5\_WDI\_6WGI\_inter & XGBoost & Optuna TPE & — & RMSE on inner validation slice & 42 & \{'max\_depth': 5, 'learning\_rate': 0.05, 'subsample': 0.8, 'colsample\_bytree': 0.8, 'reg\_alpha': 0.5, 'reg\_lambda': 2.0\} \\
+A5\_WDI\_6WGI\_inter & SARIMAX & AIC order selection & — & AIC on training fold & 42 & — \\
+A5\_WDI\_6WGI\_inter & LSTM & fixed architecture + early stopping & — & validation MSE (early stopping) & 42 & — \\
+A5\_WDI\_6WGI\_inter & Bayes\_Partial & MCMC (partial pooling) / BayesianRidge fallback & — & R-hat convergence / validation MSE & 42 & — \\
+A5\_WDI\_6WGI\_inter & Bayes\_Complete & MCMC (complete pooling) / BayesianRidge fallback & — & R-hat convergence / validation MSE & 42 & — \\
+\bottomrule
+\end{tabular}
+\end{table}
